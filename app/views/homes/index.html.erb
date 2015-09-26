@@ -1,0 +1,101 @@
+   
+      <br/>
+     
+        <% @homes.each do |home| %>
+
+         
+                      <h5>Recent News</h5>
+                      <%= home.title.upcase %><br>
+                              <%=truncate home.text, :length => 100%>
+                              <%= link_to 'Read More....', home %><br>Published at <%=time_ago_in_words(home.created_at)%>
+                    </div>
+
+                     <div class="medium-6 large-4 columns">
+                      <%= image_tag home.photo.url, :size => '150x200'  if home.photo_stored? %>
+                  <%end%>
+                    </div>
+                 
+                     
+                   
+                      <%=image_tag 'about.jpg'%>
+                    
+                        <li>
+                        <%=image_tag 'lag.jpg', :size =>"150x150"%>
+                        </li>
+
+                         <li>
+                          <%=image_tag 'Coat.png'%>
+                        </li>
+                        <br>
+                        <br>
+
+                        <li>
+                          <%=image_tag 'birthcertif.png'%>
+                        </li>
+                        <li>
+                          <%=image_tag 'sample.png'%>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                       <p>Sponsored by Lagos State and the Ministry of health</p>
+             
+                    <div class="row contact">
+                      <hr>
+                      <div class="large-12 columns">
+                        <h4>Contact Us</h4>
+                        <div class="large-4 columns">
+                          <strong>Email</strong>: nelsoncollins@me.com
+                        </div>
+                        <div class="large-4 columns">
+                          <strong>Twitter</strong>: @twitterhandle
+                        </div>
+                        <div class="large-4 columns">
+                          <strong>Phone</strong>: 555-555-1234
+                        </div>
+                      </div>
+
+                              
+      <div class="hero">
+        <div class="row">
+          <div class="large-12 columns intro-text">
+            <p>Hi there!<br>I take outdoor pictures.</p> 
+          </div>
+        </div>
+      </div>
+
+      <div class="row about">
+        <div class="medium-6 large-8 columns">
+          <h4>About</h4>
+          <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
+        </div>
+        <div class="medium-6 large-4 columns">
+          <img src="http://placehold.it/550x300">
+        </div>
+      </div>
+
+      <div class="row work">
+        <hr>
+        <div class="large-12 columns">
+          <h4>Work</h4>
+          <p>Click on each image to view my work!</p>
+
+          <ul class="clearing-thumbs small-block-grid-1 medium-block-grid-2 large-block-grid-4" data-clearing>
+            <li>
+              <a href="http://placehold.it/550x300">
+              <img data-caption="caption here" src="http://placehold.it/550x300"></a>
+            </li>
+            <li>
+              <a href="http://placehold.it/550x300"><img data-caption="caption 2 here..." src="http://placehold.it/550x300"></a>
+            </li>
+            <li>
+              <a href="http://placehold.it/550x300"><img data-caption="caption 3 here..." src="http://placehold.it/550x300"></a>
+            </li>
+            <li>
+              <a href="http://placehold.it/550x300"><img data-caption="caption 4 here..." src="http://placehold.it/550x300"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+        
+

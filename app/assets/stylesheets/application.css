@@ -1,0 +1,479 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ *= require bxslider
+ *= require foundation 
+ *= require_tree
+ *= stub print
+ /*@import "bootstrap-sprokets";
+
+ */
+ @import "foundation/components/orbit";
+ 
+ @import "foundation_and_overrides";
+ 
+ 
+ @import "bootstrap";
+
+ body {
+  background-color:#EDEFF0;
+  color: gray;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+/*.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main{
+    padding-right: 40px;
+    padding-left: 40px;
+    width: 80px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}*/
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+/*.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}*/
+.buttons {
+    float: right;
+  }
+
+  .buttons a{
+    /*color:white ;*/
+    background:#336633 ;
+    border-radius: .25em;
+     text-decoration: none;
+    font-weight: 100;
+    font-size: 15px;
+    margin:  1px;
+  }
+  /*.logo{
+  
+  text-align: left;
+  font-size: 30px;
+  border-radius: .5em;
+  text-decoration: none;
+}
+ .logo a{
+ padding-top: 20px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    font-size:2.5rem;
+    text-decoration: none;
+    color:#337AB7;
+ }*/
+
+
+ 
+
+
+ .main_container-fluid{
+  width:80%;
+ max-width: 1140px;
+  
+  color: #ffffff;
+ 
+  text-align: center;
+  
+}
+.container{
+  width: 80%;
+  max-width: 1140px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: .2em;
+  /*margin-right: 2px;*/
+  vertical-align: top;
+  color: #337AB7;
+  line-height: 18px;
+  min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    vertical-align: center;
+    
+ /* border-radius: 1.5rem;*/
+  
+}
+ 
+@media only screen and (min-width: 768px) and (max-width: 400px) {
+  .container{
+  width: 90%;
+}
+
+}
+
+  /*/*.main_container-fluid{
+    padding-right: 40px;
+    padding-left: 40px;
+    width: 80px;
+ }
+*/
+
+
+input {
+  font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+input[type=text], input[type=password] {
+  margin: 5px;
+  padding: 0 10px;
+  width: 200px;
+  height: 34px;
+  color: #404040;
+  background: white;
+  border: 1px solid;
+  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+  border-radius: 2px;
+  outline: 5px solid #eff4f7;
+  -moz-outline-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+input[type=text]:focus, input[type=password]:focus {
+  border-color: #7dc9e2;
+  outline-color: #dceefc;
+  outline-offset: 0;
+}
+
+input[type=text], input[type=email] {
+  margin: 5px;
+  padding: 0 10px;
+  width: 200px;
+  height: 34px;
+  color: #404040;
+  background: white;
+  border: 1px solid;
+  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+  border-radius: 2px;
+  outline: 5px solid #eff4f7;
+  -moz-outline-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+input[type=text]:focus, input[type=email]:focus {
+  border-color: #7dc9e2;
+  outline-color: #dceefc;
+  outline-offset: 0;
+}
+
+
+input[type=submit] {
+  padding: 0 18px;
+  height: 29px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #527881;
+  text-shadow: 0 1px #e3f1f1;
+  background: #cde5ef;
+  border: 1px solid;
+  border-color: #b4ccce #b3c0c8 #9eb9c2;
+  border-radius: 16px;
+  outline: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
+  -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+input[type=submit]:active {
+  background: #cde5ef;
+  border-color: #9eb9c2 #b3c0c8 #b4ccce;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.lt-ie9 input[type=text], .lt-ie9 input[type=password] {
+  line-height: 34px;
+}
+
+
+.lt-ie9 input[type=text], .lt-ie9 input[type=email] {
+  line-height: 34px;
+}
+
+.login {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 20px 20px;
+  width: 310px;
+  background: white;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.login:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+.login h1 {
+  margin: -20px -20px 21px;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px white;
+  background: #f3f3f3;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 3px 3px 0 0;
+  background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+  -webkit-box-shadow: 0 1px whitesmoke;
+  box-shadow: 0 1px whitesmoke;
+}
+.login p {
+  margin: 20px 0 0;
+}
+.login p:first-child {
+  margin-top: 0;
+}
+.login input[type=text], .login input[type=password] {
+  width: 278px;
+}
+
+.login input[type=text], .login input[type=email] {
+  width: 278px;
+}
+
+.login p.remember_me {
+  float: left;
+  line-height: 31px;
+}
+.login p.remember_me label {
+  font-size: 12px;
+  color: #777;
+  cursor: pointer;
+}
+.login p.remember_me input {
+  position: relative;
+  bottom: 1px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.login p.submit {
+  text-align: right;
+}
+
+.login-help {
+  margin: 20px 0;
+  font-size: 11px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px #2a85a1;
+}
+.login-help a {
+  color: #cce7fa;
+  text-decoration: none;
+}
+.login-help a:hover {
+  text-decoration: underline;
+}
+
+:-moz-placeholder {
+  color: #c9c9c9 !important;
+  font-size: 13px;
+}
+
+::-webkit-input-placeholder {
+  color: #ccc;
+  font-size: 13px;
+}
+
+.image{
+  border-radius: 2rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+.show{
+  border-radius: 2rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*padding-left: 4px;
+  padding-right: 5px;*/
+}
+
+.advert{
+  padding-top: 10px;
+  border-radius: 2.5rem;
+  color: #337AB7;
+  font-size: 15px;
+  font-weight: bold;
+  float: right;
+  
+  padding-left: 20px;
+}
+.abt{
+  text-align: center;
+  width: 820px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -142px;
+  background-color: #ffffff;
+}
+.footer, .push {
+    height: 142px; /* .push must be the same height as .footer */
+}
+#left_text{
+  width: 50%;
+  height: 250px;
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+  font-style: justify;
+  padding-top:8px;
+  background-color: #ffffff;
+  padding-left:20px;
+  color: #337AB7;
+  
+}
+/*#right_text{
+  width: 50%;
+  height: 250px;
+  float: right;
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+  font-style: justify;
+  padding-right: 10px;
+  padding-left:20px;
+  background-color: #ffffff;
+  color: #337AB7;
+  
+}*/
+
+.bxslider{
+	width: 80%;
+	height: 10%;
+}
+.name{
+	
+	padding-bottom: 50px;
+	font-color: white;
+	 font-size: 12px;
+  font-style: italic;
+}
+
+.fieldset{
+  
+  border: 1px solid #DDDDDD;
+  margin: 1.125rem 0;
+  padding: 1.25rem; }
+  fieldset legend {
+    font-weight: bold;
+    margin-left: -0.1875rem;
+    margin: 0;
+    padding: 0 0.1875rem;
+  }
+}

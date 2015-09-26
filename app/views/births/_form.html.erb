@@ -1,0 +1,135 @@
+<%= simple_form_for(@birth) do |f| %>
+
+  	<% if @birth.errors.any? %>
+		<div class="panel callout radius">
+		  	<h4 style="color: #e53935;"><%= pluralize(@birth.errors.count, "error") %> prohibited this birth from being saved:</h4>
+
+		  	<ul>
+		  		<% @birth.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+		  		<% end %>
+		  	</ul>
+		</div>
+	  	
+  	<% end %>
+	
+	<fieldset>
+	  	<div class="row">
+		  	<div class="small-12 large-12 columns">
+		  		<%= f.label :Child_name %>
+				<%= f.text_field :childname %>
+		  	</div>
+		</div>
+
+		<div class="row">
+		  	<div class="small-12 large-6 columns">
+		  		<%= f.label :Fathers_name %>
+				<%= f.text_field :fathername %>
+		  	</div>
+		  	<div class="small-12 large-6 columns">
+		  		<%= f.label :Mothers_name %>
+				<%= f.text_field :mothername %>
+		  	</div>
+		</div>
+
+		<div class="row">
+		  	<div class="small-4 large-4 columns">
+		  		<%= f.label :Blood_group %>
+				<%= f.text_field :bloodgroup %>
+		  	</div>
+		  	<div class="small-4 large-4 columns">
+		  		<%= f.label :Genotype %>
+				<%= f.text_field :genotype %>
+		  	</div>
+		  	<div class="small-4 large-4 columns">
+		  		<%= f.label :Sex %>
+				<%= f.text_field :sex %>
+		  	</div>
+		</div>
+		<div class="row">
+		  	<div class="large-6 columns">
+		  		<%= f.label :Nationality %>
+				<%= f.text_field :nationality %>
+			</div>
+		  	<div class="large-6 columns">
+		  		<%= f.label :State_of_origin %>
+				<%= f.text_field :sorigin %>
+		  	</div>
+		</div>
+
+		<div class="row">
+		  	<div class="large-6 columns">
+		  		<%= f.label :Date_of_report %>
+				<%= f.text_field :date %>
+		  	</div>
+		  	<div class="large-6 columns">
+		  		<%= f.label :Time_of_report %>
+				<%= f.text_field :time %>
+		  	</div>
+		</div>
+
+		<div class="row">
+		  	<div class="large-6 columns">
+		  		<%= f.label :State_of_birth %>
+				<%= f.text_field :sbirth %>
+		  	</div>
+		  	<div class="large-6 columns">
+		  		<%= f.label :Local_government %>
+				<%= f.text_field :lga %>
+		  	</div>
+		</div>
+
+		<div class="row">
+		  	<div class="small-3 large-4 columns">
+		  		<%= f.label :Parents_occupation %>
+				<%= f.text_field :occupation %>
+		  	</div>
+		  	<div class="small-9 large-8 columns">
+		  		<%= f.label :Residential_address %>
+				<%= f.text_field :raddress %>
+		  	</div>
+		</div>
+
+		<div class="row">
+		  	<div class="large-4 columns">
+		  		<%= f.label :Mothers_age %>
+				<%= f.text_field :mage %>
+		  	</div>
+		  	<div class="large-4 columns">
+		  		<%= f.label :Fathers_age  %>
+				<%= f.text_field :fage %>
+		  	</div>
+		  	<div class="large-4 columns">
+		  		<%= f.label :Childs_weight %>
+				<%= f.text_field :weight %>
+		  	</div>
+		</div>
+		<div class="row">
+		  	<div class="large-6 columns">
+		  		<%= f.label :Date_of_registration %>
+				<%= f.text_field :dreg %>
+		  	</div>
+		  	<div class="large-6 columns">
+		  		<%= f.label :Time_of_registration %>
+				<%= f.text_field :time %>
+		  	</div>
+		</div>
+		<div class="row">
+		  	<div class="large-6 columns">
+		  		<%= f.label :Name_of_mid_wife %>
+				<%= f.text_field :nmidwife %>
+		  	</div>
+		  	<!-- <div class="large-6 columns">
+		  		<%= f.label :Registration_number %>
+				<%= f.text_field :reg_num %>
+		  	</div> -->
+		</div>
+	</fieldset>
+
+	<div class="row right" style="padding-bottom: 20px;">
+  		<div class="small-12 large-12 columns">
+			<%= f.submit :class => "button" %>
+		</div>
+  	</div>
+  
+<% end %>

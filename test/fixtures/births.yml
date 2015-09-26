@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  childname: MyString
+  fathername: MyString
+  mothername: MyString
+  bloodgroup: MyString
+  genotype: MyString
+  sorigin: MyString
+  sex: MyString
+  date: MyString
+  time: MyString
+  lga: MyString
+  sbirth: MyString
+  nationality: MyString
+  raddress: MyString
+  occupation: MyString
+  nmidwife: MyString
+  mage: MyString
+  fage: MyString
+  weight: MyString
+  dreg: MyString
+  time: MyString
+  reg_num: MyString
+
+two:
+  childname: MyString
+  fathername: MyString
+  mothername: MyString
+  bloodgroup: MyString
+  genotype: MyString
+  sorigin: MyString
+  sex: MyString
+  date: MyString
+  time: MyString
+  lga: MyString
+  sbirth: MyString
+  nationality: MyString
+  raddress: MyString
+  occupation: MyString
+  nmidwife: MyString
+  mage: MyString
+  fage: MyString
+  weight: MyString
+  dreg: MyString
+  time: MyString
+  reg_num: MyString

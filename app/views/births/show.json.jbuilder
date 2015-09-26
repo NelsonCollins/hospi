@@ -1,0 +1,1 @@
+json.extract! @birth, :id, :childname, :fathername, :mothername, :bloodgroup, :genotype, :sorigin, :sex, :date, :time, :lga, :sbirth, :nationality, :raddress, :occupation, :nmidwife, :mage, :fage, :weight, :dreg, :time, :reg_num, :created_at, :updated_at

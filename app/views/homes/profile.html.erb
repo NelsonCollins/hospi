@@ -1,0 +1,48 @@
+<% if user_signed_in?%>
+    <div class="row">
+      <div class="col s3">
+          <ul class="collection">
+	      	<li class="collection-item">Welcome</li>
+	      	<li class="collection-item"></li>
+	      	
+	      </ul>
+      </div>
+      <div class="col s9">
+
+	      <table>
+	        <thead>
+	         <th>HOSPITAL PROFILE</th>
+	          
+	        </thead>
+	        <tbody>
+	         <tr>
+	              <th data-field="id">Hospital_name:</th>
+
+	              <td><%= current_user.hospital_name%> </td>
+	              </tr>
+	              <tr>
+	               <th data-field="id">Hospital_address:</td>
+	             
+	              <td> <%= current_user.hospital_address%></td>
+	              </tr>
+	          <tr>
+	            <th data-field="id">Email Adress:</td>
+	            <td><%= current_user.email%></td>
+	          </tr>
+	          <tr>
+	            <th data-field="id">Hospital_phone_number:</td>
+	            <td><%= current_user.hospital_phone%></td>
+	          </tr>
+	          <tr>
+	            <th data-field="id">Hospital_reg_number:</td>
+	            <td><%= current_user.hospital_reg_no%></td>
+	          </tr>
+	          <tr>
+	          	<td></td>
+	          	<td><%= render current_user.homes %></td>
+	          </tr>
+	        </tbody>
+	      </table>
+	  </div>
+    </div>
+<% end %>

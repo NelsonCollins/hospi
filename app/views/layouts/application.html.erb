@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><%= content_for?(:title) ? yield(:title) : "Hospital cert" %></title>
+
+        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+            <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+            <%= javascript_include_tag "vendor/custom.modernizr"%>
+            <%= stylesheet_link_tag "application-print", :media => "print"%>
+            <%= csrf_meta_tags %>
+            <meta name ="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    </head>
+
+     <body>
+
+
+             <div class="fixed" style="background: #1F9FC9; padding: 20px" >
+
+                <nav class="top-bar" data-topbar role="navigation" style="padding-bottom: 30px;">
+                    <ul class="title-area">
+                    <div class="name">
+                        
+                        
+                        <%=image_tag 'WECARE.png' %>
+
+                           
+                        
+                        </div>
+                        
+                    </ul>
+
+                <section class="top-bar-section">
+                    <% if user_signed_in?%>
+                     
+                    
+                    <!-- Left Nav Section -->
+                     <div style="float: right;  padding-top:11px;">        
+                    <ul class="nav nav-pills">
+                        <li role="presentation">
+                            <%=link_to "Logout", destroy_user_session_path, :method => 'delete'%>
+                        </li>
+                    </ul>
+                </div>
+                <div style="float: right;  padding-top:11px;">        
+                    <ul class="nav nav-pills">
+                        <li role="presentation">
+                            <%=link_to "Home", root_path%>
+                        </li>
+                    </ul>
+                </div>
+                    
+                    
+                <div style="float: right;  padding-top:11px;">
+        
+                      <ul class="nav nav-pills">
+                        <li role="presentation">
+                        <%=link_to "view profile", profile_homes_path%>
+                        </li>
+                      </ul>
+              </div>
+              <div style="float: right;  padding-top:11px;">
+                      <ul class="nav nav-pills">
+                        <li role="presentation">
+                        <%=link_to "view Death Cert", deaths_path %>
+                        </li>
+                      </ul>
+              </div>
+              <div style="float: right;  padding-top:11px;">
+                
+                      <ul class="nav nav-pills">
+                        <li role="presentation">
+                        <%=link_to "view Birth Cert", births_path%>
+                        </li>
+                      </ul>
+              </div>
+
+               <%else%>
+
+                        <div style="float: right;  padding-top:1px;">        
+                    <ul class="nav nav-pills">
+                        <li role="presentation">
+                            <%=link_to "Home", root_path%>
+                        </li>
+                    </ul>
+                </div>
+                        
+                      <div style="float: right;  padding-top:1px;">      
+                    <ul class="nav nav-pills">
+                        <li role="presentation">
+                            <%=link_to "Sign Up", new_user_registration_path %>
+                        </li>
+                    </ul>
+                </div>
+                 
+                <div style="float: right;  padding-top:1px;">
+                    <ul class="nav nav-pills">
+                        <li role="presentation">
+                            <%=link_to "Sign In", new_user_session_path %>
+                        </li>
+                    </ul>
+                </div>
+                <%end%>
+
+              
+                </div>
+            </div>
+        </div>
+                   
+                   
+                </section>
+            </nav>
+        </div> 
+        <!-- Navbar ends here-->    
+       
+        <div class="row" style="min-height: 500px;margin-top:2.8125rem;">
+            <%= yield %>
+        </div>
+    
+        <div id="footer">
+            <div class="small-12 large-12 columns" style="background: #1F9FC9; padding: 20px;"> 
+                <p class="copyright" style="color: #fff; text-align: center;">Copyright 2015 &copy; Craigmoore Allrights Reserved! </p>
+            </div>
+        </div>
+    </div>
+  <script src="js/vendor/jquery.js"></script>
+            <script src="js/foundation/foundation.js"></script>
+            <script src="js/foundation/foundation.orbit.js"></script>
+            <script>$(document).foundation();</script>
+
+  </body>
+             
+</html>

@@ -1,0 +1,16 @@
+<!-- <p id="notice"><%= notice %></p> -->
+
+<p>
+  <strong> HEALTH NEWS<%= @home.title.upcase %></strong>
+</p>
+
+ <%= image_tag @home.image.url, :size => '300x200' if @home.image_stored? %>
+      <p><%= @home.title %></p>
+<p>
+  <%= @home.text %>
+</p>
+<h2>Adverts</h2>
+ <%= image_tag @home.photo.url, :size => '400x200' if @home.photo_stored? %>
+
+<%= link_to 'Edit', edit_home_path(@home) %> |
+<%= link_to 'Continue', homes_path %>

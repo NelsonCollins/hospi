@@ -1,0 +1,5 @@
+<%= form_tag(deaths_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search for death certificate" %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
+

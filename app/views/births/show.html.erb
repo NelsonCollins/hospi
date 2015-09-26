@@ -1,0 +1,97 @@
+
+
+<div class="row">
+
+	<div class="small-12 large-12 columns">
+	
+		<table align="center"> 
+
+	<div class="row">
+		<div class="small-12 large-12 columns">
+		
+			<h3 align="center"><%=image_tag 'birthcert.png', :size => '200x200'%><br><%=image_tag 'lag.jpg', :size => '80x80'%><style type="align:left"></style><br><%=image_tag 'lagos.png', :size => '300x300'%><br>
+
+			</h3>
+			
+			
+		</div>
+	</div> 
+			<tr>
+				<td>Name of child </td>
+				<td><%= @birth.childname %></td>
+				<td>Sex </td>  
+				<td> <%= @birth.sex %></td> 
+				<td>Date of birth</td> 
+				<td> <%= @birth.date %> </td> 
+				<td>State of birth</td> 
+				<td colspan="3"><%= @birth.sbirth %> </td> 
+			</tr>
+			
+			<tr>
+				<td>Childs weight</td>  
+				<td><%= @birth.weight %></td>  
+				<td>Genotype</td> 
+				<td><%= @birth.genotype %></td>   
+				<td>Blood group</td> 
+				<td><%= @birth.bloodgroup %> </td>
+				<td> Local Govt</td>
+				<td><%= @birth.lga %></td>  
+				<td>Time of birth</td>  
+				<td><%= @birth.time %></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<!-- two line breaks			 -->
+<br/>
+<br/>
+<div class="row">
+	<div class="small-12 large-12 columns">
+		<table align="center">
+			<tr >
+				<td ><strong>Father's name:</strong><%= @birth.fathername %></td>
+				<td><strong>Father's Age:</strong><%= @birth.fage %></td>
+				<td><strong>State of Origin:</strong><%= @birth.sorigin %></td>
+				<!-- <td><strong>Nationality:</strong><%= @birth.nationality %></td> -->
+				<td><strong>Parent's Occupation:</strong><%= @birth.occupation %></td>
+			</tr>
+			<tr>
+				<td><strong>Mother's name:</strong><%= @birth.mothername %></td>
+				<td><strong>Mother's Age:</strong><%= @birth.mage %></td>
+				<!-- <td><strong>State of Origin:</strong><%= @birth.sorigin %></td> -->
+				<td><strong>Nationality:</strong><%= @birth.nationality %></td>
+				<td><strong>Residential address:</strong><%= @birth.raddress %></td>
+			</tr>
+		</table>
+	</div>	
+</div>
+<table align="center">
+		
+		<tr>
+				<td>Date of Registration</td>
+				<td><%= @birth.dreg %></td>
+				<td>Time of Registration</td>
+				<td><%= @birth.time %></td>
+			</tr>
+			<tr>
+				<td>Registration number</td>
+				<td><%= @birth.reg_num%></td>
+				<td>Name of Midwife</td>
+				<td><%= @birth.nmidwife %></td>
+			</tr>
+			
+			
+		</table>
+</div>
+<div class="row">
+	<div class="small-4 large-4 columns">
+		<%= link_to 'Edit', edit_birth_path(@birth) %> |
+	</div>
+	<div class="small-4 large-4 columns">
+		<%= link_to 'Continue', births_path %>
+	</div>
+	<div class="small-4 large-4 columns">
+	<%=link_to "Print Certificate", 'birth', :onclick => "window.print(); return false;"%>
+		
+	</div>

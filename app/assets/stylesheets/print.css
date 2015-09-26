@@ -1,0 +1,16 @@
+@media print {
+  body{
+    background-color: #ffffff;
+  }
+#header {display:none;}
+
+#footer {display:none;}
+ 
+.site-description {display:none;}
+.site-title {display:none;}
+
+header nav, footer img {
+	display: none;
+}
+ 
+}

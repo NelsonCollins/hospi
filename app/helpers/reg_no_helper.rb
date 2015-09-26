@@ -1,0 +1,2 @@
+module RegNoHelper
+end

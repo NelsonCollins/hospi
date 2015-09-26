@@ -1,0 +1,87 @@
+<br/>
+<%=image_tag 'comp.png', :size => '100x100'%>
+<div align="right">
+<%=@deaths.count%>
+Certificates Issued
+
+</div>
+<div class="row">
+	<div class="panel radius" style="margin-top: 20px">
+		<h4 align="center">Listing Death Certificates</h4>
+		<!-- <p id="notice"><%= notice %></p> -->
+	</div>
+</div>
+
+		<div class="row">
+			<div class="row" style="margin-bottom: 10px; ">
+				<div class="small-12 large-12 columns">
+					<div align="right">
+
+					<%= render 'search' %>
+					
+						<div align="left"><%= link_to 'Issue Certificate', new_death_path %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<div class="row">
+		<div style="float: center">
+			<table width="100%;">
+			  	<thead>
+			  		<tr>
+						  <th>Registration number</th>
+						  <th>Registration date</th>
+						  <th>Name</th>
+						  <th>Sex</th>
+						  <th>Color</th>
+						  <th>Age</th>
+						  <th>Occupation</th>
+						  <th>Marital status</th>
+						  <th>Nationality</th>
+						  
+						  <th>Nextkin</th>
+						  
+						  <th>Date Reported</th>
+						  <th>Place of Incidence</th>
+						  <!-- <th>Confirmed by Dr.</th>
+						  <th>Cleared by</th> -->
+					</tr>
+			  	</thead>
+			  	<tbody>
+					<% @deaths.each do |death| %>
+					  	<tr>
+							<td><%= death.reg_num%></td>
+							<td><%= death.rdate %></td>
+							<td><%= death.dname %></td>
+							<td><%= death.sex %></td>
+							<td><%= death.color %></td>
+							<td><%= death.age %></td>
+							<td><%= death.occupation %></td>
+							<td><%= death.mstatus %></td>
+							<td><%= death.nationality %></td>
+							
+							<td><%= death.nextkin %></td>
+							<td><%= death.cdate %></td>
+							<td><%= death.place %></td>
+							<!-- <td><%= death.cdeath %></td> -->
+							
+							<!-- <td><%= death.doctor %></td> -->
+							<!-- <td><%= death.cleared %></td> -->
+						</tr>
+						<tr>
+
+							
+								<td><%= link_to 'Show', death %></td>
+								<td><%= link_to 'Edit', edit_death_path(death) %></td>
+								<td colspan="14">
+									<%= link_to 'Destroy', death, method: :delete, data: { confirm: 'Are you sure?' } %>
+								</td>
+						
+						</tr>
+					<% end %>
+						
+			 	</tbody>
+			</table>
+		</div>
+</div>

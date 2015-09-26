@@ -1,0 +1,102 @@
+	
+<%= simple_form_for(@death) do |f| %>
+  	
+  	<% if @death.errors.any? %>
+		<div class="panel radius">
+		  	<h4 style="color: #e53935;"><%= pluralize(@death.errors.count, "error") %> prohibited this death from being saved:</h4>
+
+		  	<ul>
+		  		<% @death.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+		  		<% end %>
+		  	</ul>
+		</div>
+  	<% end %>
+<fieldset>
+
+  	<div class="row">
+  		<div class="small-12 large-8 columns">
+  			<%= f.label :Deceased_Name %>
+			<%= f.text_field :dname %>
+  		</div>
+  		<div class="small-12 large-4 columns">
+  			<%= f.label :Date_Reported %>
+			<%= f.text_field :rdate %>
+  		</div>
+  	</div>
+  	<div class="row">
+  		<div class="small-4 large-4 columns">
+  			<%= f.label :Sex %>
+			<%= f.text_field :sex %>
+  		</div>
+  		<div class="small-4 large-4 columns">
+  			<%= f.label :color %>
+			<%= f.text_field :color %>
+  		</div>
+  		<div class="small-4 large-4 columns">
+  			<%= f.label :Age %>
+			<%= f.text_field :age %>
+  		</div>
+  	</div>
+  	<div class="row">
+  		<div class="small-4 large-6 columns">
+  			<%= f.label :occupation %>
+			<%= f.text_field :occupation %>
+  		</div>
+  		<div class="small-4 large-3 columns">
+  			<%= f.label :Marial_status %>
+			<%= f.text_field :mstatus %>
+  		</div>
+  		<div class="small-4 large-3 columns">
+  			<%= f.label :Nationality %>
+			<%= f.text_field :nationality %>
+  		</div>
+  	</div>
+  	<div class="row">
+  		<div class="small-6 large-8 columns">
+  			<%= f.label :Birth_place %>
+			<%= f.text_field :birthplace %>
+  		</div>
+  		<div class="small-6 large-4 columns">
+  			<%= f.label :Date_of_incidence %>
+			<%= f.text_field :cdate %>
+  		</div>
+  	</div>
+  	<div class="row">
+  		<div class="small-6 large-6 columns">
+  			<%= f.label :Place_of_incedence %>
+			<%= f.text_field :place %>
+  		</div>
+  		<div class="small-6 large-6 columns">
+  			<%= f.label :Cause_of_death %>
+			<%= f.text_field :cdeath %>
+  		</div>
+  	</div>
+  	<div class="row">
+  		<div class="small-6 large-6 columns">
+  			<%= f.label :Next_of_kin %>
+			<%= f.text_field :nextkin %>
+  		</div>
+  		<div class="small-6 large6 columns">
+  			<%= f.label :Confirmed_by %>
+		<%= f.text_field :doctor %>
+  		</div>
+  	</div>
+  	
+  	<div class="row">
+  		<div class="small-8 large-8 columns">
+			<%= f.label :cleared %>
+			<%= f.text_field :cleared %>
+		</div>
+		<!-- <div class="small-4 large-4 columns">
+			<%= f.label :user_id %>
+			<%= f.number_field :user_id %>
+		</div> -->
+  	</div>
+</fieldset>
+  	<div class="row right" style="padding-bottom: 20px;">
+  		<div class="small-12 large-12 columns">
+			<%= f.submit :class => "button" %>
+		</div>
+  	</div>
+<% end %>

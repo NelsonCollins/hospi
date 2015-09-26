@@ -1,0 +1,68 @@
+<br/>
+<%=image_tag 'comp.png', :size => '100x100'%>
+<div align="right">
+<%=@births.count%>
+Certificates Issued
+
+</div>
+<div class="row">
+	<div class="panel radius" style="margin-top: 20px">
+		<h4 align="center">Listing Birth Certificates</h4>
+		<p id="notice"><%= notice %></p>
+	</div>
+
+</div>
+
+<div class="row">
+	<div class="row" style="margin-bottom: 10px; ">
+		<div class="small-12 large-12 columns">
+			<div align="right">
+
+			<%= render 'search' %>
+			
+				<div align="left"><%= link_to 'Issue Certificate', new_birth_path %></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="small-12 large-12 columns">
+			<table width="100%;">
+				<thead>
+					<tr>
+						<th>Registration number</th>
+						<th>Name of Child</th>
+						<th>Date of birth</th>
+						<th>Sex</th>
+						<th>Date of Registration</th>
+						<th>Time of Registration</th>
+						<th>State of birth</th>
+					</tr>
+				</thead>
+								
+				<tbody>
+					<% @births.each do |birth| %>
+
+						<tr><td><%=birth.reg_num%></td>
+					 	
+							<td><%= birth.childname%></td>
+							<td><%= birth.sex %></td>
+							<td><%= birth.dreg %></td>
+							<td><%= birth.date %></td>
+							<td><%= birth.time %></td>
+							<td><%= birth.sbirth %> </td>
+						</tr>
+						<tr> 
+
+							<td><%= link_to 'View', birth %></td>
+							<td><%= link_to 'Edit', edit_birth_path(birth) %></td>
+							<td colspan="4"><%= link_to 'Delete', birth, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+							
+						</tr>
+					<%end%>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

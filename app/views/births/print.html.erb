@@ -1,0 +1,113 @@
+<div class="row">
+	<div class="small-12 large-12 columns">
+		<h3 align="center">BIRTH CERTIFICATE </3>
+		<h5 align="center">LAGOS STATE MINISTRY OF HEALTH</h5>
+		<br>
+	</div>
+</div>
+
+<% @births.each do |birth| %>
+<div class="row">
+	<div class="small-12 large-12">
+		<table>
+			<tr>
+				<td>Registration number</td>
+				<td><%= birth.reg_num %></td>
+			</tr>
+			<tr>
+				<td>Date of Registration</td>
+				<td><%= birth.dreg %></td>
+			</tr>
+			<tr>   
+				<td>Time of Registration</td>
+				<td><%= birth.time %></td>
+			</tr>
+			<tr>
+				 <td>Name of Midwife</td>
+				 <td><%= birth.nmidwife %></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div class="row">
+	<div class="small1-2 large-12 columns">
+		<h3 align="center">This is to certify that</h3>
+		<br/>
+
+		<table align="center">
+			<tr>
+				<td>NAME OF CHILD </td>
+				<td><%= birth.childname %></td>
+				<td>SEX </td>  
+				<td><%= birth.sex %></td> 
+				<td>DATE OF BIRTH</td> 
+				<td> <%= birth.date %> </td> 
+				<td>STATE OF BIRTH</td> 
+				<td><%= birth.sbirth %> </td> 
+			</tr>
+
+			<tr>
+				<td>CHILD'S WEIGTH</td>  
+				<td><%= birth.weight %></td>  
+				<td>GENOTYPE</td> 
+				<td><%= birth.genotype %></td>   
+				<td>BLOOD GROUP</td> 
+				<td><%= birth.bloodgroup %> </td>
+				<td> LOCAL GOVT OF BIRTH</td>
+				<td><%= birth.lga %></td>  
+				<td>TIME OF BIRTH</td>  
+				<td><%= birth.time %></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div class="row">
+	<div class="small-12 large-12 columns">
+		<table align="center">
+			<tr >
+				<th>Father's name</th>
+				<td><%= birth.fathername %></td>
+			</tr>
+			<tr>
+				<th>Father's Age</th>
+				<td><%= birth.fage %></td>
+			</tr>
+			<tr>
+				<th>State of Origin</th>
+				<td><%= birth.sorigin %></td>
+			</tr>
+			<tr>
+				<th>Nationality</th>
+				<td><%= birth.nationality %></td>
+			</tr>
+			<tr>
+				<th>Parent's Occupation</th>
+				<td><%= birth.occupation %></td>
+			</tr>
+			<tr>
+				<th>Mother's name</th>
+				<td><%= birth.mothername %></td>
+			<tr>
+				<th>Mother's Age</th>
+				<td><%= birth.mage %></td>
+			</tr>
+			<tr>
+				<th>State of Origin</th>
+				<td><%= birth.sorigin %></td>
+			</tr>
+			<tr>
+				<th>Nationality</th>
+				<td><%= birth.nationality %></td>
+			</tr>
+			<tr>
+				<th>Residential address</th>
+				<td><%= birth.raddress %></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+
+<%end%>

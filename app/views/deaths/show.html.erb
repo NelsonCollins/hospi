@@ -1,0 +1,101 @@
+
+<!-- # <%=image_tag 'comp.png', :size => '100x100'%> -->
+	
+<table align="center"; width="70%"> 
+	<div class="row">
+		<div class="small-12 large-12 columns">
+			<h3 align="center"><%=image_tag 'deathlogo.png', :size => '200x200'%><br><%=image_tag 'lag.jpg', :size => '80x80'%><br><%=image_tag 'lagos.png', :size => '300x300'%><br>
+
+			</h3>
+			
+			
+		</div>
+	</div> 
+	
+	<tr>   
+		<td>Name of Deceased:</td>
+		<td style="float:right"><%= @death.dname %></td>
+	</tr>
+	<tr>	
+		<td>Date Reported:</td>
+		<td style="float:right"><%= @death.cdate %></td>
+	</tr>
+	<tr>
+		<td>Sex:</td>
+		<td style="float:right"><%= @death.sex %></td>
+	</tr>
+	<tr>
+		<td>Color:</td>
+		<td style="float:right"><%= @death.color %></td>
+	</tr>
+	<tr>
+		<td>Age:</td>
+		<td style="float:right"><%= @death.age %></td>
+	</tr>
+	<tr>
+		<td> Deceased occupation:</td>
+		<td style="float:right"> <%= @death.occupation %></td>
+	</tr>
+	<tr>
+		<td>Marital status:</td>
+		<td style="float:right"> <%= @death.mstatus %></td>
+	</tr>
+	<tr>
+		<td>Place of birth:</td>
+		<td style="float:right"><%= @death.birthplace %></td>
+	</tr>
+	<tr>
+		<td>Date of death:</td>
+		<td style="float:right"><%= @death.cdate %></td>
+	</tr>
+	<tr>
+		<td>Place of incedence:</td>
+		<td style="float:right"><%= @death.place %></td>
+	</tr>
+	<tr>
+		<td>Cause of death:</td>
+		<td style="float:right"><%= @death.cdeath %></td>
+	</tr>
+	<tr>
+		<td>Nextkin:</td>
+		<td style="float:right"><%= @death.nextkin %></td>
+	</tr>
+	<tr>
+		<td>Nationality:</td>
+		<td style="float:right"><%= @death.nationality %></td>
+	</tr>
+	<tr>  
+		<td>Confirmed By:</td>
+		<td style="float:right"><%= @death.doctor %></td>
+	</tr>
+	<tr>
+		<td>Cleared By:</td>
+		<td style="float:right"><%= @death.cleared %></td>
+	</tr>
+	<tr>
+		 
+		<td>Registration number:</td>
+		<td style="float:right"><%= @death.reg_num%></td>
+	</tr>
+	<tr>
+		<td>Date of Registration:</td>
+		<td style="float:right"><%= @death.rdate %></td>
+	</tr>
+	
+</table>
+<hr />
+
+<div class="row">
+	<div class="small-4 large-4 columns">
+		<%= link_to 'Edit', edit_death_path(@death) %> 
+	</div>
+	<div class="small-4 large-4 columns">
+		<%= link_to 'Continue',deaths_path %>
+	</div>
+	<div class="small-4 large-4 columns">
+		<%=link_to "Print Certificate", 'death', :onclick => "window.print(); return false;"%>
+	</div>
+</div>
+
+
+      
